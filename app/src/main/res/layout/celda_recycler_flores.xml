@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorVerdeTransparente">
+
+        <TextView
+            android:id="@+id/nombre_flor"
+            style="@style/StyleTitulo1"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/imagen_flor"
+            android:textColor="@color/textoPrimario"
+            tools:text="nombreFlor" />
+
+        <TextView
+            android:id="@+id/nombre_original"
+            style="@style/StyleTitulo2"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/nombre_flor"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_toLeftOf="@+id/imagen_flor"
+            android:alpha="0.7"
+            android:text="@string/nombreOriginal"
+            android:textColor="@color/textoPrimario" />
+
+        <ImageView
+            android:id="@+id/imagen_flor"
+            android:layout_width="72dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/placeholder" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

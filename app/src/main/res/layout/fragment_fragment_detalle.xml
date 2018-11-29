@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".view.FragmentDetalle">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_detalle"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:background="@drawable/wall"
+        android:elevation="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/blanco"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/imagen_detalle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:elevation="10dp"
+                android:src="@drawable/placeholder"
+                app:civ_border_color="@color/blanco"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.5" />
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimary"
+                android:elevation="10dp"
+                app:layout_collapseMode="pin">
+
+                <TextView
+                    android:id="@+id/nombre_flor_detalle"
+                    style="@style/StyleTitulo1"
+                    android:layout_width="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_marginLeft="?attr/actionBarSize"
+                    android:layout_marginRight="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    tools:text="Nombre Original Flor" />
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_detalle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nombre_cientifico_detalle"
+                style="@style/StyleTextoDetalles"
+                android:layout_marginTop="4dp"
+                android:background="@color/textoPrimario"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@color/blanco"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                tools:text="Nombre cientifico" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/StyleTextoDetalles"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:text="@string/nombreEspanol"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nombre_español_detalle"
+                    style="@style/StyleTextoDetalles"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Nombre español" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/StyleTextoDetalles"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:text="@string/grupo"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/grupo_detalle"
+                    style="@style/StyleTextoDetalles"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="grupo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/StyleTextoDetalles"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:text="@string/modalidad"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/modalidad_detalle"
+                    style="@style/StyleTextoDetalles"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Modalidad" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/StyleTextoDetalles"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:text="@string/palabra_clave"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/palabra_clave_detalle"
+                    style="@style/StyleTextoDetalles"
+                    android:layout_marginTop="18dp"
+                    android:gravity="start"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Palabra clave" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/tendencias"
+                android:textColor="@color/textoPrimario"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tend_psico_detalle"
+                style="@style/StyleTextoDetalles"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/blanco"
+                android:gravity="start"
+                android:padding="8dp"
+                android:textColor="@color/textoSecundario"
+                android:textSize="16sp"
+                tools:text="Tendencia psicosomatica" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/aspectos"
+                android:textColor="@color/textoPrimario"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/aspec_posit_detalle"
+                style="@style/StyleTextoDetalles"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/blanco"
+                android:gravity="start"
+                android:padding="8dp"
+                android:textColor="@color/textoSecundario"
+                android:textSize="16sp"
+                tools:text="Aspectos positivos" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/como_actua"
+                android:textColor="@color/textoPrimario"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/como_actua_detalle"
+                style="@style/StyleTextoDetalles"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/blanco"
+                android:gravity="start"
+                android:padding="8dp"
+                android:textColor="@color/textoSecundario"
+                android:textSize="16sp"
+                tools:text="Como Actua" />
+
+
+            <TextView
+                android:id="@+id/uso_detalle"
+                style="@style/StyleTextoDetalles"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textColor="@color/blanco"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Uso" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/blanco"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/color_detalle"
+                    style="@style/StyleTextoDetalles"
+                    android:layout_height="60dp"
+                    android:layout_gravity="top"
+                    android:layout_margin="4dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="Color" />
+
+                <TextView
+                    android:id="@+id/chakra_detalle"
+                    style="@style/StyleTextoDetalles"
+                    android:layout_height="60dp"
+                    android:layout_gravity="top"
+                    android:layout_margin="4dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="Chakra" />
+
+                <TextView
+                    android:id="@+id/preparacion_detalle"
+                    style="@style/StyleTextoDetalles"
+                    android:layout_height="60dp"
+                    android:layout_gravity="top"
+                    android:layout_margin="4dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="Preparacion" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/descripcion"
+                android:textColor="@color/textoPrimario"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/descripcion"
+                style="@style/StyleTextoDetalles"
+                android:layout_margin="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorVerdeTransparente"
+                android:elevation="10dp"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                tools:text="descripcion" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_detalle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <ImageView
+            android:id="@+id/imagen_gigante"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="16dp"
+            android:alpha="0.75"
+            android:background="@color/colorVerdeTransparente"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:padding="6dp"
+            android:textColor="@color/textoPrimario"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+    </android.support.v7.widget.CardView>
+</android.support.design.widget.CoordinatorLayout>

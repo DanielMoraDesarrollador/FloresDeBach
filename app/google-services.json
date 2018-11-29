@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "275833905962",
+    "firebase_url": "https://floresdebachapp.firebaseio.com",
+    "project_id": "floresdebachapp",
+    "storage_bucket": "floresdebachapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275833905962:android:8084af3581dc4afa",
+        "android_client_info": {
+          "package_name": "com.daniel.floresdebachapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275833905962-dajahk9ncrjddtkdmmrkusio6ggefbi5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.daniel.floresdebachapp",
+            "certificate_hash": "0c6ffca6ead75ec7b99da71aa58bf75fe87039d9"
+          }
+        },
+        {
+          "client_id": "275833905962-3f0ii4je6ds8hpraqr9lpqv7r6jio43g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB34oDU1p_Sd_UKYHyjjDFbvCtTPry9pyA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275833905962-3f0ii4je6ds8hpraqr9lpqv7r6jio43g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
