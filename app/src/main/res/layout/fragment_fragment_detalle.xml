@@ -70,8 +70,8 @@
 
             <TextView
                 android:id="@+id/nombre_cientifico_detalle"
-                style="@style/StyleTextoDetalles"
-                android:layout_marginTop="4dp"
+                style="@style/StyleTextoDetalles2"
+                android:layout_marginBottom="14dp"
                 android:background="@color/textoPrimario"
                 android:gravity="center"
                 android:padding="4dp"
@@ -80,261 +80,384 @@
                 android:textStyle="italic"
                 tools:text="Nombre cientifico" />
 
-            <LinearLayout
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_margin="14dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-                <TextView
-                    style="@style/StyleTextoDetalles"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:gravity="center"
-                    android:text="@string/nombreEspanol"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/nombre_español_detalle"
-                    style="@style/StyleTextoDetalles"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:gravity="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="Nombre español" />
-            </LinearLayout>
+                    <TextView
+                        style="@style/StyleTextoDetalles2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/nombreEspanol"
+                        android:textColor="@color/blanco"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            <LinearLayout
+                    <TextView
+                        android:id="@+id/nombre_español_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:layout_width="wrap_content"
+                        android:alpha="0.9"
+                        android:background="@color/blanco"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Nombre español" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_margin="14dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-                <TextView
-                    style="@style/StyleTextoDetalles"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:gravity="center"
-                    android:text="@string/grupo"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/grupo_detalle"
-                    style="@style/StyleTextoDetalles"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:gravity="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="grupo" />
-            </LinearLayout>
+                    <TextView
+                        style="@style/StyleTextoDetalles2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/grupo"
+                        android:textColor="@color/blanco"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            <LinearLayout
+                    <TextView
+                        android:id="@+id/grupo_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:layout_width="wrap_content"
+                        android:alpha="0.9"
+                        android:background="@color/blanco"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="grupo" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_margin="14dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-                <TextView
-                    style="@style/StyleTextoDetalles"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:gravity="center"
-                    android:text="@string/modalidad"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/modalidad_detalle"
-                    style="@style/StyleTextoDetalles"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:gravity="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="Modalidad" />
-            </LinearLayout>
+                    <TextView
+                        style="@style/StyleTextoDetalles2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/modalidad"
+                        android:textColor="@color/blanco"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            <LinearLayout
+                    <TextView
+                        android:id="@+id/modalidad_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:layout_width="wrap_content"
+                        android:alpha="0.9"
+                        android:background="@color/blanco"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Modalidad" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_margin="14dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-                <TextView
-                    style="@style/StyleTextoDetalles"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:gravity="center"
-                    android:text="@string/palabra_clave"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/palabra_clave_detalle"
-                    style="@style/StyleTextoDetalles"
-                    android:layout_marginTop="18dp"
-                    android:gravity="start"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="Palabra clave" />
-            </LinearLayout>
+                    <TextView
+                        style="@style/StyleTextoDetalles2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/palabra_clave"
+                        android:textColor="@color/blanco"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            <TextView
+                    <TextView
+                        android:id="@+id/palabra_clave_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:alpha="0.9"
+                        android:background="@color/blanco"
+                        android:gravity="start"
+                        android:padding="6dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Palabra clave" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/tendencias"
-                android:textColor="@color/textoPrimario"
-                android:textSize="16sp" />
+                android:layout_margin="14dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-            <TextView
-                android:id="@+id/tend_psico_detalle"
-                style="@style/StyleTextoDetalles"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="20dp"
-                android:background="@color/blanco"
-                android:gravity="start"
-                android:padding="8dp"
-                android:textColor="@color/textoSecundario"
-                android:textSize="16sp"
-                tools:text="Tendencia psicosomatica" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorVerdeTransparente"
+                        android:padding="6dp"
+                        android:text="@string/tendencias"
+                        android:textColor="@color/textoPrimario"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tend_psico_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:background="@color/blanco"
+                        android:gravity="start"
+                        android:padding="6dp"
+                        android:textColor="@color/textoSecundario"
+                        android:textSize="16sp"
+                        tools:text="Tendencia psicosomatica" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/aspectos"
-                android:textColor="@color/textoPrimario"
-                android:textSize="16sp" />
+                android:layout_margin="14dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-            <TextView
-                android:id="@+id/aspec_posit_detalle"
-                style="@style/StyleTextoDetalles"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="20dp"
-                android:background="@color/blanco"
-                android:gravity="start"
-                android:padding="8dp"
-                android:textColor="@color/textoSecundario"
-                android:textSize="16sp"
-                tools:text="Aspectos positivos" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorVerdeTransparente"
+                        android:padding="6dp"
+                        android:text="@string/aspectos"
+                        android:textColor="@color/textoPrimario"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/aspec_posit_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:background="@color/blanco"
+                        android:gravity="start"
+                        android:padding="6dp"
+                        android:textColor="@color/textoSecundario"
+                        android:textSize="16sp"
+                        tools:text="Aspectos positivos" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/como_actua"
-                android:textColor="@color/textoPrimario"
-                android:textSize="16sp" />
+                android:layout_margin="14dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-            <TextView
-                android:id="@+id/como_actua_detalle"
-                style="@style/StyleTextoDetalles"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="20dp"
-                android:background="@color/blanco"
-                android:gravity="start"
-                android:padding="8dp"
-                android:textColor="@color/textoSecundario"
-                android:textSize="16sp"
-                tools:text="Como Actua" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorVerdeTransparente"
+                        android:padding="6dp"
+                        android:text="@string/como_actua"
+                        android:textColor="@color/textoPrimario"
+                        android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/uso_detalle"
-                style="@style/StyleTextoDetalles"
-                android:background="@color/colorAccent"
-                android:gravity="center"
-                android:padding="8dp"
-                android:textColor="@color/blanco"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                tools:text="Uso" />
+                    <TextView
+                        android:id="@+id/como_actua_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:background="@color/blanco"
+                        android:gravity="start"
+                        android:padding="6dp"
+                        android:textColor="@color/textoSecundario"
+                        android:textSize="16sp"
+                        tools:text="Como Actua" />
 
-            <LinearLayout
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:background="@color/blanco"
-                android:orientation="horizontal"
-                android:padding="8dp">
+                android:layout_margin="14dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-                <TextView
-                    android:id="@+id/color_detalle"
-                    style="@style/StyleTextoDetalles"
-                    android:layout_height="60dp"
-                    android:layout_gravity="top"
-                    android:layout_margin="4dp"
-                    android:layout_marginBottom="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:lines="2"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:text="Color" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/chakra_detalle"
-                    style="@style/StyleTextoDetalles"
-                    android:layout_height="60dp"
-                    android:layout_gravity="top"
-                    android:layout_margin="4dp"
-                    android:layout_marginBottom="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:lines="2"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:text="Chakra" />
+                    <TextView
+                        style="@style/StyleTextoDetalles2"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Uso:"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/preparacion_detalle"
-                    style="@style/StyleTextoDetalles"
-                    android:layout_height="60dp"
-                    android:layout_gravity="top"
-                    android:layout_margin="4dp"
-                    android:layout_marginBottom="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:lines="2"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:text="Preparacion" />
+                    <TextView
+                        android:id="@+id/uso_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:textColor="@color/blanco"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="Uso" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
-            </LinearLayout>
-
-            <TextView
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/descripcion"
-                android:textColor="@color/textoPrimario"
-                android:textSize="16sp" />
+                android:layout_margin="14dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
 
-            <TextView
-                android:id="@+id/descripcion"
-                style="@style/StyleTextoDetalles"
-                android:layout_margin="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="4dp"
-                android:background="@color/colorVerdeTransparente"
-                android:elevation="10dp"
-                android:padding="8dp"
-                android:textSize="16sp"
-                android:textStyle="bold|italic"
-                tools:text="descripcion" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blanco"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:id="@+id/color_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:padding="6dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="Color" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorDivision" />
+
+                    <TextView
+                        android:id="@+id/chakra_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:padding="6dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="Chakra" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorDivision" />
+
+                    <TextView
+                        android:id="@+id/preparacion_detalle"
+                        style="@style/StyleTextoDetalles2"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:padding="6dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="Preparacion" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorAccent"
+                        android:padding="6dp"
+                        android:text="@string/descripcion"
+                        android:textColor="@color/blanco"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/descripcion"
+                        style="@style/StyleTextoDetalles2"
+                        android:background="@color/blanco"
+                        android:padding="6dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        tools:text="descripcion" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

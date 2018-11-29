@@ -79,7 +79,7 @@ public class FragmentDetalle extends Fragment {
         nombreOriginal.setText(florDeBach.getNombre());
         nombreCientifico.setText("Nombre Cientifico: " + florDeBach.getNombreCientifico());
         descripcion.setText(florDeBach.getDescripcion());
-        uso.setText("Uso: \n" + florDeBach.getUso());
+        uso.setText(florDeBach.getUso());
         color.setText("Color: \n" + florDeBach.getColor());
         chakra.setText("Chacra: \n" + florDeBach.getChakra());
         palabraClave.setText(florDeBach.getPalabraClave());
