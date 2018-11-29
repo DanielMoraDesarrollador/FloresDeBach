@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryLight"
+    android:background="@color/colorFondo"
     tools:context=".view.FragmentDetalle">
 
 
@@ -12,7 +12,7 @@
         android:id="@+id/appbar_detalle"
         android:layout_width="match_parent"
         android:layout_height="275dp"
-        android:background="@drawable/imagematerial"
+        android:background="@drawable/mandala2"
         android:elevation="10dp"
         android:theme="@style/ThemeOverlay.AppCompat.Light">
 
@@ -72,7 +72,7 @@
                 android:id="@+id/nombre_cientifico_detalle"
                 style="@style/StyleTextoDetalles2"
                 android:layout_marginBottom="14dp"
-                android:background="@color/textoPrimario"
+                android:background="@color/gris"
                 android:gravity="center"
                 android:padding="8dp"
                 android:textColor="@color/blanco"
@@ -96,7 +96,7 @@
                         style="@style/StyleTextoDetalles2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:background="@color/colorAccent"
+                        android:background="@color/gris"
                         android:gravity="center"
                         android:padding="6dp"
                         android:text="@string/nombreEspanol"
@@ -135,7 +135,7 @@
                         style="@style/StyleTextoDetalles2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:background="@color/colorAccent"
+                        android:background="@color/gris"
                         android:gravity="center"
                         android:padding="6dp"
                         android:text="@string/grupo"
@@ -173,7 +173,7 @@
                         style="@style/StyleTextoDetalles2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:background="@color/colorAccent"
+                        android:background="@color/gris"
                         android:gravity="center"
                         android:padding="6dp"
                         android:text="@string/modalidad"
@@ -211,7 +211,7 @@
                         style="@style/StyleTextoDetalles2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:background="@color/colorAccent"
+                        android:background="@color/gris"
                         android:gravity="center"
                         android:padding="6dp"
                         android:text="@string/palabra_clave"
@@ -247,10 +247,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorVerdeTransparente"
+                        android:background="@color/colorPrimaryDark"
                         android:padding="6dp"
                         android:text="@string/tendencias"
-                        android:textColor="@color/textoPrimario"
+                        android:textColor="@color/blanco"
                         android:textSize="16sp" />
 
                     <TextView
@@ -280,10 +280,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorVerdeTransparente"
+                        android:background="@color/colorPrimaryDark"
                         android:padding="6dp"
                         android:text="@string/aspectos"
-                        android:textColor="@color/textoPrimario"
+                        android:textColor="@color/blanco"
                         android:textSize="16sp" />
 
                     <TextView
@@ -313,10 +313,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorVerdeTransparente"
+                        android:background="@color/colorPrimaryDark"
                         android:padding="6dp"
                         android:text="@string/como_actua"
-                        android:textColor="@color/textoPrimario"
+                        android:textColor="@color/blanco"
                         android:textSize="16sp" />
 
                     <TextView
@@ -355,7 +355,7 @@
                     <TextView
                         android:id="@+id/uso_detalle"
                         style="@style/StyleTextoDetalles2"
-                        android:background="@color/colorAccent"
+                        android:background="@color/gris"
                         android:gravity="center"
                         android:padding="6dp"
                         android:textColor="@color/blanco"
@@ -375,7 +375,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorVerdeTransparente"
+                    android:background="@color/colorPrimaryDark"
                     android:orientation="horizontal">
 
                     <TextView
@@ -442,7 +442,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorAccent"
+                        android:background="@color/gris"
                         android:padding="6dp"
                         android:text="@string/descripcion"
                         android:textColor="@color/blanco"

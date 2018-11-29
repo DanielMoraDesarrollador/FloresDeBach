@@ -44,7 +44,7 @@
                     android:layout_height="50dp"
                     android:layout_margin="6dp"
                     android:scaleType="center"
-                    android:src="@drawable/rosemary4" />
+                    android:src="@drawable/rosemary3" />
             </RelativeLayout>
 
             <android.support.v7.widget.Toolbar
@@ -63,7 +63,7 @@
         android:id="@+id/recycler_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorDivision"
+        android:background="@color/colorFondo"
         android:elevation="6dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
