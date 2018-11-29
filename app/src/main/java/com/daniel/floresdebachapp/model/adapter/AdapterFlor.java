@@ -98,7 +98,7 @@ public class AdapterFlor extends RecyclerView.Adapter {
 
         public void cargarFlor(FlorDeBach florDeBach) {
             textViewFlor.setText(florDeBach.getNombreOriginal());
-            textViewFlorOriginal.setText("( " + florDeBach.getNombreCientifico() + " )");
+            textViewFlorOriginal.setText("(" + florDeBach.getNombreCientifico() + ")");
             if (TextUtils.isEmpty(florDeBach.getImagenFlor2())) {
                 return;
             }
