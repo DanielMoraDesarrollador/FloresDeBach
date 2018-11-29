@@ -45,4 +45,5 @@ public class ActivityDetalle extends AppCompatActivity {
             fragmentDetalles.add(FragmentDetalle.dameUnFragment(florDeBach));
         }
     }
+    
 }
