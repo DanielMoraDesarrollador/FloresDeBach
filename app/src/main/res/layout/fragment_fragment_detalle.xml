@@ -215,7 +215,7 @@
                         android:background="@color/gris"
                         android:gravity="center"
                         android:padding="6dp"
-                        android:text="@string/palabra_clave"
+                        android:text="@string/clave"
                         android:textAlignment="center"
                         android:textColor="@color/blanco"
                         android:textSize="16sp"
@@ -226,9 +226,8 @@
                         style="@style/StyleTextoDetalles2"
                         android:alpha="0.9"
                         android:background="@color/blanco"
-                        android:gravity="center"
+                        android:gravity="start"
                         android:padding="6dp"
-                        android:textAlignment="center"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:text="Palabra clave" />
@@ -383,44 +382,44 @@
                     <TextView
                         android:id="@+id/color_detalle"
                         style="@style/StyleTextoDetalles2"
-                        android:layout_height="60dp"
+                        android:layout_height="90dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:lines="2"
+                        android:lines="3"
                         android:padding="6dp"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:text="Color" />
 
                     <ImageView
-                        android:layout_width="1dp"
+                        android:layout_width="2dp"
                         android:layout_height="match_parent"
                         android:background="@color/colorDivision" />
 
                     <TextView
                         android:id="@+id/chakra_detalle"
                         style="@style/StyleTextoDetalles2"
-                        android:layout_height="60dp"
+                        android:layout_height="90dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:lines="2"
+                        android:lines="3"
                         android:padding="6dp"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:text="Chakra" />
 
                     <ImageView
-                        android:layout_width="1dp"
+                        android:layout_width="2dp"
                         android:layout_height="match_parent"
                         android:background="@color/colorDivision" />
 
                     <TextView
                         android:id="@+id/preparacion_detalle"
                         style="@style/StyleTextoDetalles2"
-                        android:layout_height="60dp"
+                        android:layout_height="90dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:lines="2"
+                        android:lines="3"
                         android:padding="6dp"
                         android:textSize="16sp"
                         android:textStyle="bold"

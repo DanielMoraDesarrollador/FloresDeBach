@@ -86,9 +86,9 @@ public class FragmentDetalle extends Fragment {
         aspectosPositivos.setText(florDeBach.getAspectosPositivos());
         comoActua.setText(florDeBach.getComoActua());
         modalidad.setText(florDeBach.getModalidad());
-        preparacion.setText("Preparación: \n" + florDeBach.getPreparacion());
-        color.setText("Color: \n" + florDeBach.getColor());
-        chakra.setText("Chacra: \n" + florDeBach.getChakra());
+        preparacion.setText("Preparación: \n\n" + florDeBach.getPreparacion());
+        color.setText("Color: \n\n" + florDeBach.getColor());
+        chakra.setText("Chacra: \n\n" + florDeBach.getChakra());
         grupo.setText(florDeBach.getGrupo());
 
         cardview = view.findViewById(R.id.card_detalle);
