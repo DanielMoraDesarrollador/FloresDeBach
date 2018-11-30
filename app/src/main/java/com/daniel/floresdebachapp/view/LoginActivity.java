@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -42,6 +43,9 @@ public class LoginActivity extends AppCompatActivity {
     private CallbackManager callbackManager;
     private LoginButton loginButton;
 
+    private CardView cardViewBienvenida;
+    private CardView bienvenida;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +57,12 @@ public class LoginActivity extends AppCompatActivity {
         buttonIngresar = findViewById(R.id.button_ingresar);
         buttonRegistrarse = findViewById(R.id.button_registrarse);
         textViewError = findViewById(R.id.error_text_id);
+
+        bienvenida=findViewById(R.id.bienvenida);
+        cardViewBienvenida=findViewById(R.id.card_bienvenida);
+        bienvenida.setBackgroundResource(R.color.transparente);
+        cardViewBienvenida.setBackgroundResource(R.color.transparente);
+
         callbackManager = CallbackManager.Factory.create();
         loginButton = findViewById(R.id.login_button);
         loginButton.setReadPermissions("email", "public_profile");
@@ -145,7 +155,6 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         }
         if (AccessToken.getCurrentAccessToken() != null) {
-            loginButton.setVisibility(View.INVISIBLE);
             startActivity(intent);
             finish();
         }
@@ -187,5 +196,13 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent a = new Intent(Intent.ACTION_MAIN);
+        a.addCategory(Intent.CATEGORY_HOME);
+        a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(a);
     }
 }

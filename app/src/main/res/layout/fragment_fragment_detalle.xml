@@ -107,11 +107,11 @@
                     <TextView
                         android:id="@+id/nombre_español_detalle"
                         style="@style/StyleTextoDetalles2"
-                        android:layout_width="wrap_content"
                         android:alpha="0.9"
                         android:background="@color/blanco"
                         android:gravity="center"
                         android:padding="6dp"
+                        android:textAlignment="center"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:text="Nombre español" />
@@ -139,6 +139,7 @@
                         android:gravity="center"
                         android:padding="6dp"
                         android:text="@string/grupo"
+                        android:textAlignment="center"
                         android:textColor="@color/blanco"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -146,7 +147,6 @@
                     <TextView
                         android:id="@+id/grupo_detalle"
                         style="@style/StyleTextoDetalles2"
-                        android:layout_width="wrap_content"
                         android:alpha="0.9"
                         android:background="@color/blanco"
                         android:gravity="center"
@@ -177,6 +177,7 @@
                         android:gravity="center"
                         android:padding="6dp"
                         android:text="@string/modalidad"
+                        android:textAlignment="center"
                         android:textColor="@color/blanco"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -184,11 +185,11 @@
                     <TextView
                         android:id="@+id/modalidad_detalle"
                         style="@style/StyleTextoDetalles2"
-                        android:layout_width="wrap_content"
                         android:alpha="0.9"
                         android:background="@color/blanco"
                         android:gravity="center"
                         android:padding="6dp"
+                        android:textAlignment="center"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:text="Modalidad" />
@@ -215,6 +216,7 @@
                         android:gravity="center"
                         android:padding="6dp"
                         android:text="@string/palabra_clave"
+                        android:textAlignment="center"
                         android:textColor="@color/blanco"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -224,8 +226,9 @@
                         style="@style/StyleTextoDetalles2"
                         android:alpha="0.9"
                         android:background="@color/blanco"
-                        android:gravity="start"
+                        android:gravity="center"
                         android:padding="6dp"
+                        android:textAlignment="center"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         tools:text="Palabra clave" />
@@ -346,7 +349,6 @@
 
                     <TextView
                         style="@style/StyleTextoDetalles2"
-                        android:gravity="center"
                         android:padding="8dp"
                         android:text="Uso:"
                         android:textSize="18sp"

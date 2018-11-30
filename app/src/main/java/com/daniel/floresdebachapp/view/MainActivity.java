@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
     private Intent intent;
     private FragmentManager fragmentManager;
 
-    private boolean doubleBackToExitPressedOnce = false;
+//    private boolean doubleBackToExitPressedOnce = false;
 
 
     private RecyclerView recyclerViewFlores;
@@ -100,6 +100,12 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        chequearSiEstaLogueado();
+    }
+
     public void setAdapterLinear(RecyclerView recyclerView, LinearLayoutManager linearLayoutManager,
                                  RecyclerView.Adapter adapter) {
 
@@ -150,22 +156,22 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
 //    }
 
 
-    @Override
-    public void onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-            return;
-        }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce=false;
-            }
-        }, 2000);
-    }
+//    @Override
+//    public void onBackPressed() {
+//        if (doubleBackToExitPressedOnce) {
+//            super.onBackPressed();
+//            return;
+//        }
+//
+//        this.doubleBackToExitPressedOnce = true;
+//        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+//
+//        new Handler().postDelayed(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//                doubleBackToExitPressedOnce=false;
+//            }
+//        }, 2000);
+//    }
 }
