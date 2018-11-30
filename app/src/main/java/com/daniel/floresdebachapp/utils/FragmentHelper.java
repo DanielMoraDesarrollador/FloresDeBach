@@ -11,7 +11,6 @@ public class FragmentHelper {
     public static final void cargarFragment(Fragment fragment, int container, FragmentManager fragmentManager) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
-
         fragmentTransaction.replace(container, fragment);
         fragmentTransaction.commit();
     }

@@ -49,6 +49,7 @@ public class FragmentDetalle extends Fragment {
         // Required empty public constructor
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -80,14 +81,14 @@ public class FragmentDetalle extends Fragment {
         nombreCientifico.setText("Nombre Cientifico: " + florDeBach.getNombreCientifico());
         descripcion.setText(florDeBach.getDescripcion());
         uso.setText(florDeBach.getUso());
-        color.setText("Color: \n" + florDeBach.getColor());
-        chakra.setText("Chacra: \n" + florDeBach.getChakra());
         palabraClave.setText(florDeBach.getPalabraClave());
         tendenciaPsicosomatica.setText(florDeBach.getTendenciaPsicosomatica());
         aspectosPositivos.setText(florDeBach.getAspectosPositivos());
         comoActua.setText(florDeBach.getComoActua());
         modalidad.setText(florDeBach.getModalidad());
         preparacion.setText("Preparación: \n" + florDeBach.getPreparacion());
+        color.setText("Color: \n" + florDeBach.getColor());
+        chakra.setText("Chacra: \n" + florDeBach.getChakra());
         grupo.setText(florDeBach.getGrupo());
 
         cardview = view.findViewById(R.id.card_detalle);
