@@ -36,6 +36,7 @@
             android:layout_marginStart="10dp"
             android:layout_toLeftOf="@+id/imagen_flor"
             android:alpha="0.7"
+            android:textSize="16sp"
             android:text="@string/nombreOriginal"
             android:textColor="@color/textoPrimario" />
 
