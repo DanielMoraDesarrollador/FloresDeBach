@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -27,6 +28,7 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Arrays;
 
@@ -46,6 +48,8 @@ public class LoginActivity extends AppCompatActivity {
     private CardView cardViewBienvenida;
     private CardView bienvenida;
 
+//    private static final String TAG = LoginActivity.class.getSimpleName();
+//    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,14 +62,34 @@ public class LoginActivity extends AppCompatActivity {
         buttonRegistrarse = findViewById(R.id.button_registrarse);
         textViewError = findViewById(R.id.error_text_id);
 
-        bienvenida=findViewById(R.id.bienvenida);
-        cardViewBienvenida=findViewById(R.id.card_bienvenida);
+        bienvenida = findViewById(R.id.bienvenida);
+        cardViewBienvenida = findViewById(R.id.card_bienvenida);
         bienvenida.setBackgroundResource(R.color.transparente);
         cardViewBienvenida.setBackgroundResource(R.color.transparente);
 
         callbackManager = CallbackManager.Factory.create();
         loginButton = findViewById(R.id.login_button);
-        loginButton.setReadPermissions("email", "public_profile");
+        loginButton.setReadPermissions("email");
+//        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+//            @Override
+//            public void onSuccess(LoginResult loginResult) {
+//                Log.d(TAG, "facebook:onSuccess:" + loginResult);
+//                handleFacebookAccessToken(loginResult.getAccessToken());
+//            }
+//
+//            @Override
+//            public void onCancel() {
+//                Log.d(TAG, "facebook:onCancel");
+//                // ...
+//            }
+//
+//            @Override
+//            public void onError(FacebookException error) {
+//                Log.d(TAG, "facebook:onError", error);
+//                // ...
+//            }
+//        });
+
         intent = new Intent(LoginActivity.this, MainActivity.class);
 
         buttonIngresar.setOnClickListener(new View.OnClickListener() {
@@ -100,15 +124,7 @@ public class LoginActivity extends AppCompatActivity {
         });
         chequearSiEstaLogueado();
 
-        AccessToken accessToken = AccessToken.getCurrentAccessToken();
-        boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
-        if (isLoggedIn) {
-            return;
-        }
-
-
-        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile"));
-
+//        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile"));
 
         LoginManager.getInstance().registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
@@ -130,6 +146,12 @@ public class LoginActivity extends AppCompatActivity {
                         textViewError.setVisibility(View.VISIBLE);
                     }
                 });
+
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
+        if (isLoggedIn) {
+            return;
+        }
     }
 
     private void loguearNativamente(String s, String s1) {
@@ -148,6 +170,31 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
+//    private void handleFacebookAccessToken(AccessToken token) {
+//        Log.d(TAG, "handleFacebookAccessToken:" + token);
+//
+//        AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
+//
+//        mAuth.signInWithCredential(credential)
+//                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()) {
+//                            // Sign in success, update UI with the signed-in user's information
+//                            Log.d(TAG, "signInWithCredential:success");
+//                            FirebaseUser user = mAuth.getCurrentUser();
+//                        } else {
+//                            // If sign in fails, display a message to the user.
+//                            Log.w(TAG, "signInWithCredential:failure", task.getException());
+//                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+//                                    Toast.LENGTH_SHORT).show();
+//                        }
+//
+//                        // ...
+//                    }
+//                });
+//    }
 
     private void chequearSiEstaLogueado() {
         if (mAuth.getCurrentUser() != null) {
@@ -197,6 +244,20 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        mAuth.addAuthStateListener(mAuthListener);
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        if (mAuthListener != null) {
+//            mAuth.removeAuthStateListener(mAuthListener);
+//        }
+//    }
 
     @Override
     public void onBackPressed() {

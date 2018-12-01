@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
                     Toast.makeText(getApplicationContext(),
                             "¡Cerró Sesión Correctamente!",
                             Toast.LENGTH_SHORT).show();
-                    finish();
+                    finishAffinity();
                 }
             default:
                 return super.onOptionsItemSelected(item);
