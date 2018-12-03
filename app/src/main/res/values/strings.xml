@@ -14,7 +14,8 @@
     <string name="bienvenida">Te damos la bienvenida!!</string>
     <string name="nombreOriginal">Nombre Original</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
-    <string name="facebook_app_id">1183253201823292</string> <string name="fb_login_protocol_scheme">fb1183253201823292</string>
+    <string name="facebook_app_id">1183253201823292</string>
+    <string name="fb_login_protocol_scheme">fb1183253201823292</string>
     <string name="nombreEspanol">Nombre Español</string>
     <string name="grupo">Grupo</string>
     <string name="modalidad">Modalidad</string>
