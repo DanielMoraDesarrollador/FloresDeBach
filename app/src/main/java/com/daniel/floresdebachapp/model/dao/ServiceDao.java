@@ -7,6 +7,6 @@ import retrofit2.http.GET;
 
 public interface ServiceDao {
 
-    @GET("bins/19vm7m")
+    @GET("bins/buqj6")
     Call<ContenedorFlor>obtenerFloresBach();
 }

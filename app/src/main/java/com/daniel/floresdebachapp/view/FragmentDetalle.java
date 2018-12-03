@@ -54,7 +54,7 @@ public class FragmentDetalle extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_fragment_detalle, container, false);
+        View view = inflater.inflate(R.layout.fragment_detalle, container, false);
         imageView = view.findViewById(R.id.imagen_detalle);
         nombreFlor = view.findViewById(R.id.nombre_flor_detalle);
         nombreOriginal = view.findViewById(R.id.nombre_español_detalle);

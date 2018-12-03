@@ -101,7 +101,7 @@
                         android:padding="6dp"
                         android:text="@string/nombreEspanol"
                         android:textColor="@color/blanco"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -112,7 +112,7 @@
                         android:gravity="center"
                         android:padding="6dp"
                         android:textAlignment="center"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         tools:text="Nombre español" />
 
@@ -141,7 +141,7 @@
                         android:text="@string/grupo"
                         android:textAlignment="center"
                         android:textColor="@color/blanco"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -151,7 +151,7 @@
                         android:background="@color/blanco"
                         android:gravity="center"
                         android:padding="6dp"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         tools:text="grupo" />
                 </LinearLayout>
@@ -179,7 +179,7 @@
                         android:text="@string/modalidad"
                         android:textAlignment="center"
                         android:textColor="@color/blanco"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -190,7 +190,7 @@
                         android:gravity="center"
                         android:padding="6dp"
                         android:textAlignment="center"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         tools:text="Modalidad" />
                 </LinearLayout>
@@ -218,7 +218,7 @@
                         android:text="@string/clave"
                         android:textAlignment="center"
                         android:textColor="@color/blanco"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -228,7 +228,7 @@
                         android:background="@color/blanco"
                         android:gravity="start"
                         android:padding="6dp"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         tools:text="Palabra clave" />
                 </LinearLayout>
@@ -350,7 +350,7 @@
                         style="@style/StyleTextoDetalles2"
                         android:padding="8dp"
                         android:text="Uso:"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -360,7 +360,7 @@
                         android:gravity="center"
                         android:padding="6dp"
                         android:textColor="@color/blanco"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         tools:text="Uso" />
                 </LinearLayout>
@@ -489,7 +489,7 @@
             android:background="@color/colorVerdeTransparente"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center_horizontal"
-            android:padding="6dp"
+            android:padding="8dp"
             android:textColor="@color/textoPrimario"
             android:textSize="30sp"
             android:textStyle="bold|italic" />
