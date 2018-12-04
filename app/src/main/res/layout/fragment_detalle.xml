@@ -12,7 +12,7 @@
         android:id="@+id/appbar_detalle"
         android:layout_width="match_parent"
         android:layout_height="275dp"
-        android:background="@drawable/mandala2"
+        android:background="@drawable/placeflores3"
         android:elevation="10dp"
         android:theme="@style/ThemeOverlay.AppCompat.Light">
 
@@ -29,7 +29,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
                 android:elevation="10dp"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/placeholderblanco"
                 app:civ_border_color="@color/blanco"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0.5" />
@@ -384,7 +384,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@color/colorPrimaryLight"
                     android:orientation="horizontal">
 
                     <TextView
@@ -395,14 +395,14 @@
                         android:gravity="center"
                         android:lines="3"
                         android:padding="6dp"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         tools:text="Color" />
 
                     <ImageView
                         android:layout_width="2dp"
                         android:layout_height="match_parent"
-                        android:background="@color/colorDivision" />
+                        android:background="@color/colorFondo" />
 
                     <TextView
                         android:id="@+id/chakra_detalle"
@@ -412,14 +412,14 @@
                         android:gravity="center"
                         android:lines="3"
                         android:padding="6dp"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         tools:text="Chakra" />
 
                     <ImageView
                         android:layout_width="2dp"
                         android:layout_height="match_parent"
-                        android:background="@color/colorDivision" />
+                        android:background="@color/colorFondo" />
 
                     <TextView
                         android:id="@+id/preparacion_detalle"
@@ -429,7 +429,7 @@
                         android:gravity="center"
                         android:lines="3"
                         android:padding="6dp"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         tools:text="Preparacion" />
 
@@ -499,7 +499,7 @@
             android:gravity="center_horizontal"
             android:padding="8dp"
             android:textColor="@color/textoPrimario"
-            android:textSize="30sp"
+            android:textSize="36sp"
             android:textStyle="bold|italic" />
 
     </android.support.v7.widget.CardView>
