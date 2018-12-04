@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_search"
-        android:icon="@drawable/ic_search_black_24dp"
+        android:icon="@drawable/search"
         android:title="@string/action_search"
-        android:iconTint="@color/blanco"
-        app:showAsAction="ifRoom" />
+        android:iconTint="@color/textoPrimario"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_setting"
         android:icon="@drawable/ic_settings_black_24dp"
