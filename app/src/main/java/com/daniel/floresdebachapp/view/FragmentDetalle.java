@@ -86,9 +86,9 @@ public class FragmentDetalle extends Fragment {
         aspectosPositivos.setText(florDeBach.getAspectosPositivos());
         comoActua.setText(florDeBach.getComoActua());
         modalidad.setText(florDeBach.getModalidad());
-        preparacion.setText("Preparación: \n\n" + florDeBach.getPreparacion());
-        color.setText("Color: \n\n" + florDeBach.getColor());
-        chakra.setText("Chakra: \n\n" + florDeBach.getChakra());
+        preparacion.setText("Preparación: " + florDeBach.getPreparacion());
+        color.setText("Color: " + florDeBach.getColor());
+        chakra.setText("Chakra: " + florDeBach.getChakra());
         grupo.setText(florDeBach.getGrupo());
 
         cardview = view.findViewById(R.id.card_detalle);
@@ -136,6 +136,7 @@ public class FragmentDetalle extends Fragment {
         Glide.with(getContext())
                 .using(new FirebaseImageLoader())
                 .load(reference.child(imagenDescargada))
+                .placeholder(R.drawable.placeholderblanco)
                 .into(imageView);
     }
 
@@ -146,6 +147,7 @@ public class FragmentDetalle extends Fragment {
         Glide.with(getContext())
                 .using(new FirebaseImageLoader())
                 .load(reference.child(imagenDescargada))
+                .placeholder(R.drawable.placeholderblanco)
                 .into(imagenGrande);
     }
 
