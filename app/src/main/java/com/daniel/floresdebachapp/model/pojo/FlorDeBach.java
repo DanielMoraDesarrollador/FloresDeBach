@@ -1,8 +1,14 @@
 package com.daniel.floresdebachapp.model.pojo;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
+import java.util.List;
 
 public class FlorDeBach implements Serializable {
+
+    @SerializedName("grupos")
+    private List<Grupo> listaDeGrupos;
 
     private String nombre;
 
@@ -26,6 +32,7 @@ public class FlorDeBach implements Serializable {
 
     private String comoActua;
 
+    @SerializedName("agrupado")
     private String grupo;
 
     private String modalidad;
@@ -126,6 +133,10 @@ public class FlorDeBach implements Serializable {
 
     public String getFlorId() {
         return florId;
+    }
+
+    public List<Grupo> getListaDeGrupos() {
+        return listaDeGrupos;
     }
 
     @Override

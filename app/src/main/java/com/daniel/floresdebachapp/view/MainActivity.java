@@ -1,18 +1,12 @@
 package com.daniel.floresdebachapp.view;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
-import android.os.Handler;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Base64;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -21,14 +15,13 @@ import com.daniel.floresdebachapp.R;
 import com.daniel.floresdebachapp.controller.ControllerFlor;
 import com.daniel.floresdebachapp.model.adapter.AdapterFlor;
 import com.daniel.floresdebachapp.model.pojo.FlorDeBach;
+import com.daniel.floresdebachapp.utils.FragmentHelper;
 import com.daniel.floresdebachapp.utils.ResultListener;
 import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.Serializable;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AdapterFlor.NotificadorFlor {
@@ -44,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
     private LinearLayoutManager linearLayoutManager;
     private AdapterFlor adapterFlor;
     private ControllerFlor controllerFlor;
+
+    private FragmentGrupos fragmentGrupos;
 
 
     @Override
@@ -74,10 +69,15 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+
             case R.id.action_search:
                 return true;
+
             case R.id.action_setting:
-                return true;
+                fragmentGrupos = new FragmentGrupos();
+                FragmentHelper.cargarFragmentConBackStack(fragmentGrupos, R.id.contenedor_de_fragments, fragmentManager);
+                break;
+
             case R.id.action_close:
                 if (FirebaseAuth.getInstance().getCurrentUser() != null) {
                     if (AccessToken.getCurrentAccessToken() != null) {
@@ -92,7 +92,9 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
             default:
                 return super.onOptionsItemSelected(item);
         }
+        return false;
     }
+
 
     public void chequearSiEstaLogueado() {
         if (firebaseAuth.getCurrentUser() == null) {
@@ -106,7 +108,8 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
         chequearSiEstaLogueado();
     }
 
-    public void setAdapterLinear(RecyclerView recyclerView, LinearLayoutManager linearLayoutManager,
+    public void setAdapterLinear(RecyclerView recyclerView, LinearLayoutManager
+            linearLayoutManager,
                                  RecyclerView.Adapter adapter) {
 
         recyclerView.setLayoutManager(linearLayoutManager);

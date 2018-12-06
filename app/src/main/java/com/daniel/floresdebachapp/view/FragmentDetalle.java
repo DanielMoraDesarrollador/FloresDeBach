@@ -136,7 +136,6 @@ public class FragmentDetalle extends Fragment {
         Glide.with(getContext())
                 .using(new FirebaseImageLoader())
                 .load(reference.child(imagenDescargada))
-                .placeholder(R.drawable.placeholderblanco)
                 .into(imageView);
     }
 
@@ -147,7 +146,6 @@ public class FragmentDetalle extends Fragment {
         Glide.with(getContext())
                 .using(new FirebaseImageLoader())
                 .load(reference.child(imagenDescargada))
-                .placeholder(R.drawable.placeholderblanco)
                 .into(imagenGrande);
     }
 
