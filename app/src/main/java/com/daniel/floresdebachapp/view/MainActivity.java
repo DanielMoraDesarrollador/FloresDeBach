@@ -14,7 +14,10 @@ import android.widget.Toast;
 import com.daniel.floresdebachapp.R;
 import com.daniel.floresdebachapp.controller.ControllerFlor;
 import com.daniel.floresdebachapp.model.adapter.AdapterFlor;
+import com.daniel.floresdebachapp.model.adapter.AdapterPregunta;
 import com.daniel.floresdebachapp.model.pojo.FlorDeBach;
+import com.daniel.floresdebachapp.model.pojo.Grupo;
+import com.daniel.floresdebachapp.model.pojo.Pregunta;
 import com.daniel.floresdebachapp.utils.FragmentHelper;
 import com.daniel.floresdebachapp.utils.ResultListener;
 import com.facebook.AccessToken;
@@ -24,7 +27,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.io.Serializable;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements AdapterFlor.NotificadorFlor {
+public class MainActivity extends AppCompatActivity implements AdapterFlor.NotificadorFlor{
 
     private FirebaseAuth firebaseAuth;
     private Intent intent;
@@ -34,11 +37,15 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
 
 
     private RecyclerView recyclerViewFlores;
-    private LinearLayoutManager linearLayoutManager;
+    private LinearLayoutManager linearLayoutManagerGrupo;
     private AdapterFlor adapterFlor;
     private ControllerFlor controllerFlor;
 
     private FragmentGrupos fragmentGrupos;
+
+    private RecyclerView recyclerViewPregunta;
+    private AdapterPregunta adapterPregunta;
+    private LinearLayoutManager linearLayoutManagerPregunta;
 
 
     @Override
@@ -50,10 +57,15 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
         firebaseAuth = FirebaseAuth.getInstance();
         intent = new Intent(this, LoginActivity.class);
         adapterFlor = new AdapterFlor(getApplicationContext(), this);
+
+        recyclerViewPregunta = findViewById(R.id.recycler_pregunta);
+        adapterPregunta = new AdapterPregunta(getApplicationContext());
+        linearLayoutManagerPregunta = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
+
         fragmentManager = getSupportFragmentManager();
-        linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
+        linearLayoutManagerGrupo = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         recyclerViewFlores = findViewById(R.id.recycler_main);
-        setAdapterLinear(recyclerViewFlores, linearLayoutManager, adapterFlor);
+        setAdapterLinear(recyclerViewFlores, linearLayoutManagerGrupo, adapterFlor);
         controllerFlor = new ControllerFlor(getApplicationContext());
         obtenerFlores();
         chequearSiEstaLogueado();
@@ -137,6 +149,9 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
         intent.putExtras(bundle);
         startActivity(intent);
     }
+
+
+
 
 //    private void printHash() {
 //        try {

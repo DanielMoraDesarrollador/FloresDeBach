@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.daniel.floresdebachapp.R;
 import com.daniel.floresdebachapp.model.pojo.Grupo;
+import com.daniel.floresdebachapp.model.pojo.Pregunta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,7 @@ public class AdapterGrupo extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.celda_grid, parent, false);
+        View view = layoutInflater.inflate(R.layout.celda_grupos, parent, false);
         ViewHolderGrupo viewHolderGrupo = new ViewHolderGrupo(view);
         return viewHolderGrupo;
     }
@@ -65,6 +66,7 @@ public class AdapterGrupo extends RecyclerView.Adapter {
     public class ViewHolderGrupo extends RecyclerView.ViewHolder {
 
         private TextView textViewNombre;
+        private List<Pregunta> preguntaList;
 
         public ViewHolderGrupo(View itemView) {
             super(itemView);
@@ -74,7 +76,7 @@ public class AdapterGrupo extends RecyclerView.Adapter {
                 @Override
                 public void onClick(View v) {
                     int posicionCliqueada = getAdapterPosition();
-                    notificadorGrupo.notificarGrupoCliqueado(grupos, posicionCliqueada);
+                    notificadorGrupo.notificarGrupoCliqueado(grupos, posicionCliqueada, preguntaList);
                 }
             });
         }
@@ -82,11 +84,12 @@ public class AdapterGrupo extends RecyclerView.Adapter {
 
         public void cargarGrupo(Grupo grupo) {
             textViewNombre.setText(grupo.getNombreGrupo());
+            preguntaList.addAll(grupo.getListaDePreguntas());
         }
     }
 
     public interface NotificadorGrupo {
-        public void notificarGrupoCliqueado(List<Grupo> listaGrupos, int posicion);
+        public void notificarGrupoCliqueado(List<Grupo> listaGrupos, int posicion, List<Pregunta> preguntas);
     }
 
 }

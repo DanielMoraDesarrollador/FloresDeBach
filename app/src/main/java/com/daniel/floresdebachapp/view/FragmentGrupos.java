@@ -1,6 +1,7 @@
 package com.daniel.floresdebachapp.view;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import com.daniel.floresdebachapp.R;
 import com.daniel.floresdebachapp.controller.ControllerGrupo;
 import com.daniel.floresdebachapp.model.adapter.AdapterGrupo;
 import com.daniel.floresdebachapp.model.pojo.Grupo;
+import com.daniel.floresdebachapp.model.pojo.Pregunta;
 import com.daniel.floresdebachapp.utils.ResultListener;
 
 import java.util.List;
@@ -28,6 +30,7 @@ public class FragmentGrupos extends Fragment implements AdapterGrupo.Notificador
     private RecyclerView recyclerViewGrupo;
     private AdapterGrupo adapterGrupo;
     private ControllerGrupo controllerGrupo;
+//    private NotificadorActivity notificadorActivity;
 
 
     public FragmentGrupos() {
@@ -43,7 +46,7 @@ public class FragmentGrupos extends Fragment implements AdapterGrupo.Notificador
         recyclerViewGrupo = view.findViewById(R.id.recycler_fragment_grupo);
         controllerGrupo = new ControllerGrupo(getContext());
         adapterGrupo = new AdapterGrupo(getContext(), this);
-        recyclerViewGrupo.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
+        recyclerViewGrupo.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         recyclerViewGrupo.setBackgroundResource(R.drawable.gradienteverde);
         recyclerViewGrupo.setAdapter(adapterGrupo);
         obtenerGrupos();
@@ -59,8 +62,19 @@ public class FragmentGrupos extends Fragment implements AdapterGrupo.Notificador
         });
     }
 
+//    @Override
+//    public void onAttach(Context context) {
+//        super.onAttach(context);
+//        notificadorActivity = (NotificadorActivity) context;
+//    }
+
     @Override
-    public void notificarGrupoCliqueado(List<Grupo> listaGrupos, int posicion) {
+    public void notificarGrupoCliqueado(List<Grupo> listaGrupos, int posicion, List<Pregunta> preguntas) {
+  //      notificadorActivity.notificarActivity(listaGrupos, posicion, preguntas);
 
     }
+
+//    public interface NotificadorActivity {
+//        public void notificarActivity(List<Grupo> grupos, int posicion, List<Pregunta> preguntas);
+//    }
 }
