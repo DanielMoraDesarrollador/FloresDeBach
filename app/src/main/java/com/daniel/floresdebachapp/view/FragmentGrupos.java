@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,7 +43,7 @@ public class FragmentGrupos extends Fragment implements AdapterGrupo.Notificador
         recyclerViewGrupo = view.findViewById(R.id.recycler_fragment_grupo);
         controllerGrupo = new ControllerGrupo(getContext());
         adapterGrupo = new AdapterGrupo(getContext(), this);
-        recyclerViewGrupo.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        recyclerViewGrupo.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
         recyclerViewGrupo.setBackgroundResource(R.drawable.gradienteverde);
         recyclerViewGrupo.setAdapter(adapterGrupo);
         obtenerGrupos();

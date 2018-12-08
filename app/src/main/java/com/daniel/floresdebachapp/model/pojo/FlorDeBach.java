@@ -7,7 +7,6 @@ import java.util.List;
 
 public class FlorDeBach implements Serializable {
 
-    @SerializedName("grupos")
     private List<Grupo> listaDeGrupos;
 
     private String nombre;
