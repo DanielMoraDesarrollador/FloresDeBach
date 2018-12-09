@@ -12,10 +12,10 @@ public interface ServiceDao {
 //    @GET("bins/buqj6")
 //    Call<ContenedorFlor>obtenerFloresBach();
 
-    @GET("bins/10sb3y")
+    @GET("bins/13gco6")
     Call<ContenedorFlor>obtenerFloresBach();
 
-    @GET("bins/10sb3y")
+    @GET("bins/13gco6")
     Call<ContenedorGrupo>obtenerGrupos();
 
 //    @GET("bins/buqj6/:grupos")

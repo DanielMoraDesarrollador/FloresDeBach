@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Grupo implements Serializable {
 
-    @SerializedName("pregunta")
+    @SerializedName("data")
     private List<Pregunta> listaDePreguntas;
 
     private String grupoId;

@@ -9,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.daniel.floresdebachapp.R;
@@ -27,14 +29,16 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.io.Serializable;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements AdapterFlor.NotificadorFlor{
+public class MainActivity extends AppCompatActivity implements AdapterFlor.NotificadorFlor, FragmentGrupos.NotificadorActivity {
 
     private FirebaseAuth firebaseAuth;
     private Intent intent;
     private FragmentManager fragmentManager;
 
-//    private boolean doubleBackToExitPressedOnce = false;
+    private FragmentPregunta fragmentPregunta;
+    private FrameLayout frameLayoutPregunta;
 
+//    private boolean doubleBackToExitPressedOnce = false;
 
     private RecyclerView recyclerViewFlores;
     private LinearLayoutManager linearLayoutManagerGrupo;
@@ -42,10 +46,6 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
     private ControllerFlor controllerFlor;
 
     private FragmentGrupos fragmentGrupos;
-
-    private RecyclerView recyclerViewPregunta;
-    private AdapterPregunta adapterPregunta;
-    private LinearLayoutManager linearLayoutManagerPregunta;
 
 
     @Override
@@ -58,10 +58,6 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
         intent = new Intent(this, LoginActivity.class);
         adapterFlor = new AdapterFlor(getApplicationContext(), this);
 
-        recyclerViewPregunta = findViewById(R.id.recycler_pregunta);
-        adapterPregunta = new AdapterPregunta(getApplicationContext());
-        linearLayoutManagerPregunta = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
-
         fragmentManager = getSupportFragmentManager();
         linearLayoutManagerGrupo = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         recyclerViewFlores = findViewById(R.id.recycler_main);
@@ -69,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
         controllerFlor = new ControllerFlor(getApplicationContext());
         obtenerFlores();
         chequearSiEstaLogueado();
+
         //printHash();
     }
 
@@ -87,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
 
             case R.id.action_setting:
                 fragmentGrupos = new FragmentGrupos();
-                FragmentHelper.cargarFragmentConBackStack(fragmentGrupos, R.id.contenedor_de_fragments, fragmentManager);
+                FragmentHelper.cargarFragmentConBackStack(fragmentGrupos, R.id.contenedor_de_fragments1, fragmentManager);
                 break;
 
             case R.id.action_close:
@@ -150,7 +147,15 @@ public class MainActivity extends AppCompatActivity implements AdapterFlor.Notif
         startActivity(intent);
     }
 
+    @Override
+    public void notificarActivity(Grupo grupo) {
+        frameLayoutPregunta = new FrameLayout(getApplicationContext());
+        frameLayoutPregunta.setVisibility(View.VISIBLE);
+        fragmentPregunta = new FragmentPregunta();
+        fragmentPregunta.setearListaPreguntas(grupo);
+        FragmentHelper.cargarFragmentConBackStack(fragmentPregunta, R.id.contenedor_de_fragments2, fragmentManager);
 
+    }
 
 
 //    private void printHash() {

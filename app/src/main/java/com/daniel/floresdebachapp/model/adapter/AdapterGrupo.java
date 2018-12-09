@@ -66,17 +66,18 @@ public class AdapterGrupo extends RecyclerView.Adapter {
     public class ViewHolderGrupo extends RecyclerView.ViewHolder {
 
         private TextView textViewNombre;
-        private List<Pregunta> preguntaList;
 
-        public ViewHolderGrupo(View itemView) {
+
+        public ViewHolderGrupo(final View itemView) {
             super(itemView);
             textViewNombre = itemView.findViewById(R.id.nombre_celda_grupo);
             textViewNombre.setSelected(true);
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int posicionCliqueada = getAdapterPosition();
-                    notificadorGrupo.notificarGrupoCliqueado(grupos, posicionCliqueada, preguntaList);
+                    Grupo grupoAEnviar = grupos.get(getAdapterPosition());
+                    notificadorGrupo.notificarGrupoCliqueado(grupoAEnviar);
                 }
             });
         }
@@ -84,12 +85,11 @@ public class AdapterGrupo extends RecyclerView.Adapter {
 
         public void cargarGrupo(Grupo grupo) {
             textViewNombre.setText(grupo.getNombreGrupo());
-            preguntaList.addAll(grupo.getListaDePreguntas());
         }
     }
 
     public interface NotificadorGrupo {
-        public void notificarGrupoCliqueado(List<Grupo> listaGrupos, int posicion, List<Pregunta> preguntas);
+        public void notificarGrupoCliqueado(Grupo grupo);
     }
 
 }

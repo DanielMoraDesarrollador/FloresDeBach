@@ -25,6 +25,15 @@ public class AdapterPregunta extends RecyclerView.Adapter {
         this.preguntas = new ArrayList<>();
     }
 
+    public List<Pregunta> getPreguntas() {
+        return preguntas;
+    }
+
+    public void setPreguntas(List<Pregunta> preguntas) {
+        this.preguntas = preguntas;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -49,6 +58,7 @@ public class AdapterPregunta extends RecyclerView.Adapter {
             return 0;
         }
     }
+
 
     public void agregarPreguntas(List<Pregunta> resultado) {
         for (Pregunta preguntaAAgregar : resultado) {

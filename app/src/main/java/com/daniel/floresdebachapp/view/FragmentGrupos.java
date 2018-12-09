@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import com.daniel.floresdebachapp.R;
 import com.daniel.floresdebachapp.controller.ControllerGrupo;
 import com.daniel.floresdebachapp.model.adapter.AdapterGrupo;
+import com.daniel.floresdebachapp.model.adapter.AdapterPregunta;
 import com.daniel.floresdebachapp.model.pojo.Grupo;
 import com.daniel.floresdebachapp.model.pojo.Pregunta;
 import com.daniel.floresdebachapp.utils.ResultListener;
@@ -30,8 +31,7 @@ public class FragmentGrupos extends Fragment implements AdapterGrupo.Notificador
     private RecyclerView recyclerViewGrupo;
     private AdapterGrupo adapterGrupo;
     private ControllerGrupo controllerGrupo;
-//    private NotificadorActivity notificadorActivity;
-
+    private NotificadorActivity notificadorActivity;
 
     public FragmentGrupos() {
         // Required empty public constructor
@@ -50,6 +50,7 @@ public class FragmentGrupos extends Fragment implements AdapterGrupo.Notificador
         recyclerViewGrupo.setBackgroundResource(R.drawable.gradienteverde);
         recyclerViewGrupo.setAdapter(adapterGrupo);
         obtenerGrupos();
+
         return view;
     }
 
@@ -62,19 +63,18 @@ public class FragmentGrupos extends Fragment implements AdapterGrupo.Notificador
         });
     }
 
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        notificadorActivity = (NotificadorActivity) context;
-//    }
-
     @Override
-    public void notificarGrupoCliqueado(List<Grupo> listaGrupos, int posicion, List<Pregunta> preguntas) {
-  //      notificadorActivity.notificarActivity(listaGrupos, posicion, preguntas);
-
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        notificadorActivity = (NotificadorActivity) context;
     }
 
-//    public interface NotificadorActivity {
-//        public void notificarActivity(List<Grupo> grupos, int posicion, List<Pregunta> preguntas);
-//    }
+    @Override
+    public void notificarGrupoCliqueado(Grupo grupo1) {
+        notificadorActivity.notificarActivity(grupo1);
+    }
+
+    public interface NotificadorActivity {
+        public void notificarActivity(Grupo grupo2);
+    }
 }
